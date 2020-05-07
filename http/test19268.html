@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="./js/PCA.js"></script>
+    <script src="./js/PCA/canvasjs.min.js"></script>
+    <script src="./js/PCA/plot.js"></script>
+    
+  </head>
+<body>
+    <!-- <form id="form1">
+        点击此处上传文件：<input type="file" name="file" multiple='multiple' enctype="multipart/form-data" method="post"><br>
+        <input type="button" value="提交" onclick="test()">
+    </form>
+    <pre>
+        var =f32;        dsfe adf ;<br>        dsfwef
+        </pre>
+    <div id='feedbackFile'></div> -->
+    <div id="canvasDiv" style="width: 800px;height: 800px;">
+        
+    </div>
+    <!-- <div class="row">
+        <div class="col right-align">
+          <div style="width: 100%;">
+            <pre class="shorthand" style="
+                padding: 8px;
+                margin-top: 0;"></pre>
+            <label class="checkbox-label" style="display: none;">
+              Restart animation on each value change
+              <input class="reset" type="checkbox" checked />
+            </label>
+          </div>
+          <div class="controls"></div>
+        </div>
+        <div class="col left-align">
+          <div class="container" style="
+              height: 256px;
+              width: 320px;
+              border-radius: 4px;
+              background: #333642;
+              position: relative;
+              overflow: hidden;">
+            <div class="y-measure"></div>
+            <canvas width="384" height="256" >
+          </div>
+          <div>
+          </div>
+        </div>
+      </div> -->
+      <div>
+        <h2>简介</h2>
+        文章来源：<span class="pop" data-content="けいしょう">軽症</span><a href="https://www3.nhk.or.jp/news/html/20200429/k10012410261000.html?utm_int=news_contents_news-main_001">患者 緊急性高い13症状のリスト公表 厚労省 新型コロナ</a>
+      </div>
+      <div>
+        <h2>P1</h2>
+        新型コロナウイルスに感染して宿泊施設や自宅で<span class="pop" data-content="りょうよう">療養</span>する軽症の<span class="pop" data-content="かんじゃ">患者</span>について、<span class="pop" data-content="こうせい　ろうどうしょう">厚生労働省</span>は「<span class="pop" data-content="くちびる">唇</span>が<span class="pop" data-content="むらさきいろ">紫色</span>になっている」「座らないと息ができない」など、<span class="pop" data-content="じゅうしょうか">重症化</span>の<span class="pop" data-content="ぜんちょう">前兆</span>となる緊急性の高い<span class="pop" data-content="しょうじょう">症状</span>を自分でチェックできるリストを<span class="pop" data-content="こうひょう">公表</span>しました。
+      </div>
+      <div>
+        <h2>P2</h2>
+        厚生労働省は<span class="pop" data-content="とうしょ　指最初的时候，不是‘当时’">当初</span>、軽症の患者や症状のない人について、宿泊施設や自宅で療養してもらう<span class="pop" data-content="ほうしん">方針</span>を示していましたが、埼玉県で自宅<span class="pop" data-content="たいきじゅう">待機中</span>だった男性が死亡したことなどを受けて、宿泊施設での療養を基本とする方針に変更しました。
+      </div>
+      <div>
+        <h2>P3</h2>
+        ただ、家庭の事情などで自宅で療養する患者もいて、<span class="pop" data-content="ようだい">容体</span>が<span class="pop"data-content="きゅうへん">急変</span>する可能性もあることから、緊急性の高い症状を自分でチェックできるリストを公表しました。
+      </div>
+      <div>
+        <h2>P4</h2>
+        この中では、症状の<span class="pop" data-content="れい　此外，其训读为：「ためし」">例</span>として、<span class="pop" data-content="ひょうじょう">表情</span>や<span class="pop" data-content="がいけん">外見</span>では「<span class="pop" data-content="かおいろ">顔色</span>が明らかに悪い」、「唇が紫色になっている」、また、息苦しさの<span class="pop" data-content="じょうたい">状態</span>としては「胸の痛みがある」「横になれない。座らないと息ができない」、「肩で息をしている」など、合わせて13の<span class="pop" data-content="こうもく">項目</span>を挙げています。
+      </div>
+      <div>
+        <h2>P5</h2>
+        厚生労働省はこれらの項目を患者や家族が<span class="pop" data-content="げんそく">原則</span>１日２回確認し、<span class="pop" data-content="がいとう">該当</span>する項目が１つでもあれば自宅療養の人は<span class="pop" data-content="じちたい">自治体</span>の<span class="pop" data-content="れんらく　まどぐち">連絡窓口</span>、宿泊施設であれば配置されている看護師などにすぐに連絡してほしいとしています。
+      </div>
+      <div>
+        <h2>P6</h2>
+        <h5>13項目とは</h5>
+        【表情・外見】<br>
+        ▽顔色が明らかに悪い<br>
+        ▽唇が紫色になっている<br>
+        ▽いつもと違う、様子がおかしい<br>
+
+        【息苦しさなど】<br>
+        ▽息が<span class="pop" data-content="あらく">荒く</span>なった（<span class="pop" data-content="こきゅうすう">呼吸数</span>が多くなった）<br>
+        ▽急に息苦しくなった<br>
+        ▽生活をしていて少し動くと息苦しい<br>
+        ▽胸の痛みがある<br>
+        ▽横になれない。座らないと息ができない<br>
+        ▽肩で息をしている<br>
+        ▽突然（２時間以内を目安）ゼーゼーしはじめた<br>
+
+        【意識<span class="pop" data-content="しょうがい">障害</span>など】<br>
+        ▽ぼんやりしている（反応が弱い）<br>
+        ▽もうろうとしている（返事がない）<br>
+        ▽脈がとぶ、脈のリズムが<span class="pop" data-content="みだれる">乱れる</span>感じがする<br>
+
+      </div>
+      <div>
+        <h2>知识点-本文重点汉字</h2>
+        症：しょう<br>
+        状：じょう　無「しょう」音<br>
+        顔色：<br>
+<ul>
+        <li>音読：がんしょく。</li>
+       <li> 訓読：かおいろ。</li>
+</ul>
+        日语里的音变，尤其是双音节汉字组成的复合词的音变非常重要，参考：<a href="/detail.html?id=24">日语音变规则</a>
+
+      </div>
+</body>
+

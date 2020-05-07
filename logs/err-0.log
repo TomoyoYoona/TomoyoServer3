@@ -1,0 +1,53 @@
+2020-04-23 11:39:48: server error TypeError: Cannot set property 'text' of undefined
+    at postFile (D:\lyh\TomoyoServer\controller\PCA.js:29:29)
+    at D:\lyh\TomoyoServer\routes\PCA.js:19:5
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (D:\lyh\TomoyoServer\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at module.exports (D:\lyh\TomoyoServer\middleware\loginCheck.js:4:15)
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (D:\lyh\TomoyoServer\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at D:\lyh\TomoyoServer\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at D:\lyh\TomoyoServer\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-compose\index.js:42:32)
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-router\lib\router.js:332:32)
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-compose\index.js:42:32)
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-router\lib\router.js:332:32)
+    at dispatch (D:\lyh\TomoyoServer\node_modules\koa-compose\index.js:42:32) {
+  request: {
+    method: 'POST',
+    url: '/api/PCA/postFile',
+    header: {
+      host: 'localhost',
+      connection: 'close',
+      'content-length': '333',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0',
+      accept: '*/*',
+      'accept-language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+      'accept-encoding': 'gzip, deflate',
+      'x-requested-with': 'XMLHttpRequest',
+      'content-type': 'multipart/form-data; boundary=---------------------------73724021713474423591130792215',
+      origin: 'http://localhost:8080',
+      referer: 'http://localhost:8080/test?file=&text=',
+      cookie: 'koa.sid=jDryLxJX-FnoEBYUQRJhPMRL8FUpszfq; koa.sid.sig=53VVM54rfAgwU6odVQT06P0fEps'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'production' },
+  originalUrl: '/api/PCA/postFile',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (D:\lyh\TomoyoServer\node_modules\mysql\lib\protocol\Protocol.js:112:13)
+    at Socket.<anonymous> (D:\lyh\TomoyoServer\node_modules\mysql\lib\Connection.js:94:28)
+    at Socket.<anonymous> (D:\lyh\TomoyoServer\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:323:22)
+    at endReadableNT (_stream_readable.js:1204:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)

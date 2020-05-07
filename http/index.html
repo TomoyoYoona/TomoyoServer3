@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title id='indexTitle'></title> 
+<link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="css/tomoyoCss.css" rel="stylesheet">
+<link href="css/component.css" rel="stylesheet">
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/dynamicTitle.js"></script>
+<script src="js/home/loadContent.js"></script>
+<script src="js/home/pageAnimation.js"></script>
+<script src="js/dynamicLines.js"></script>
+<script src="js/global.js"></script>
+<script src="js/home/navbar.js"></script>
+<style>
+    .mainDiv{
+        height: 100%;
+    }
+    figcaption a{
+        font-family: 'Consolas';
+        letter-spacing: -1px;
+    }
+    .text1 ul li{
+        margin:10px;
+    }
+    *{
+        user-select:none;
+    }
+</style>
+</head>
+<body>
+<div style="position: relative;" class="mainDiv" id="mainDiv">
+    <div id="logoAndHeader">
+        <div class="logo" style="float: left;">
+            My&nbsp&nbsp&nbspHTML  
+        </div>
+        <div id="header" class="header" style="float: left;">
+        Tomoyo的主页</div>
+    </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <a class="navbar-brand" href="#" style="color: salmon;">Tomoyo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      All
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+
+      <div class="text1">
+          <p style="margin-left:80px;letter-spacing:1.5px;font-size: 18px;line-height: 180%;">
+        Tomoyo的homepage<br>
+        记下一些笔记<br>
+        之前前端使用githubPage服务，项目页面：<a href="https://github.com/TomoyoNatsume/tomoyoPages"><embed src="pic/mark-github.svg">&nbsp;TomoyoPages</a>
+    </p>
+      </div>
+        <div class="text2">
+        <ul class="grid cs-style-3">
+            <li>
+                <figure id='fig1'>
+                    <img src="pic/4.png" alt="img04">
+                    <canvas width="75" height="75"></canvas>
+                    <figcaption>
+                        <h3>HTML</h3>
+                        <span>有关HTML和JS的一些笔记</span>
+                        <a href="/index_catelog?catelog=HTML">Take a look-></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure id='fig2'>
+                    <img src="pic/2.png" alt="img04">
+                    <canvas width="75" height="75"></canvas>
+                    <figcaption>
+                        <h3>游戏（还没写）</h3>
+                        <span>战双帕弥什、影之诗、LOL</span>
+                        <a>Take a look-></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure id='fig3'>
+                    <img src="pic/1.png" alt="img01">
+                    <canvas width="75" height="75"></canvas>
+                    <figcaption>
+                        <h3>日语</h3>
+                        <span>日语笔记</span>
+                        <a href="/index_catelog?catelog=JP">Take a look-></a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure id='fig4'>
+                    <img src="pic/6.png" alt="img06">
+                    <canvas width="75" height="75"></canvas>
+                    <figcaption>
+                        <h3>菜单（还没写）</h3>
+                        <span>做过的菜...</span>
+                        <a>Take a look-></a>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+        </div>  
+        <div class="text1">
+        <p style="margin-left:80px;letter-spacing:1.5px;font-size: 18px;line-height: 180%;">
+            本站使用素材（图片和控件等）包括：<br>
+            <ul style="margin-left:100px;">
+                <li><a href="https://github.com/hustcc/canvas-nest.js">github canvas-nest项目，用于背景动态线条</a></li>
+                <li><a href="https://github.com/primer/octicons">github Octicon项目，用于一些icons</a></li>
+                <li><a href="https://v3.bootcss.com/components/">bootstrap导航栏控件以及Glyphicons字体图标</a></li>
+                <li><a href="http://www.ui3g.com/code/uicode-1322.html">优设计html5 figcaption和css3制作8种惊艳的图片标题hover效果</a></li>
+                <li><a href="http://www.ui3g.com/code/uicode-2188.html">优设计3种CSS3移动手机隐藏菜单UI界面设计，用于菜单栏</a></li>
+                <li><a href="http://pixiv.net/artworks/77857272">背景图片：碧蓝航线贝尔法斯特，作者：Nao</a></li>
+                <li>网站Icons 来自： <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></li>
+            </ul>
+        </p>
+        </div>
+        <div class="text2">
+            <footer>
+                <h5>联系作者：</h5>
+                <p>邮箱：lyh554616801@sina.com</p>
+                <p>qq：554616801</p>
+                <p>微信：lyh554616801</p>
+                <!-- <h5>访问人次：</h5> -->
+            </footer>
+
+        </div>
+
+        
+</div>
+
+</body>
+</html>

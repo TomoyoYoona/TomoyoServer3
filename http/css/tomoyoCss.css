@@ -1,0 +1,347 @@
+/* 引用字体 */
+@font-face{
+    font-family: 'Kavoon';
+    src:url('../fonts/Kavoon-Regular-webfont.ttf');
+
+}
+@font-face{
+    font-family:'Consolas';
+    src:url('../fonts/consola.ttf');
+}
+
+
+/* 全局样式 */
+*{
+    line-height: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    cursor:url('../pic/cur.ico'), default;
+}
+body{
+    background-image: url('../pic/bg4.jpg');
+    margin: 0px;
+    line-height: normal;
+    padding: 0px;
+    border: rgb(255, 255, 255) 0.1px solid;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    cursor: pointer;
+}
+a:hover{
+    color: salmon;
+    text-decoration: none;
+}
+li a{
+    color: inherit;
+}
+
+ol li{
+    margin:6px;
+}
+ol ol{
+    list-style-type: upper-roman;
+}
+ol ol ol{
+    list-style-type: upper-alpha;
+}
+pre{
+    margin-bottom: 0px;
+}
+canvas{
+    position: absolute;
+}
+
+
+.mainDiv{
+    width: 100%;
+    float: left;
+
+}
+#logoAndHeader{
+    height: 140px;
+    /* margin: -18px -18px 0px -18px; */
+    padding: 0px;
+    background-color: #e2dfdfc2;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    user-select: none;
+}
+.logo{
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    font-family: Kavoon;
+    line-height: 120px;
+    font-size: 50px;
+    height: 120px;
+    color: rgb(68, 68, 68);
+    /* letter-spacing: 0.2em; */
+    float: left;
+    letter-spacing: 2px;
+}
+.header{
+    height: 140px;
+    margin: 0px;
+    width: 70%;
+    background-color: rgb(49,49,57) ;
+    font-family: fantasy;
+    text-align: center;
+    line-height: 140px;
+    font-size: 40px;
+    color: white;
+    float: left;
+    /* 设置文本行高与div高度一致就可使其垂直居中，而水平居中使用text-align=center
+     */
+    /* box-shadow: 10px 10px 5px #807e7eb9; */
+    border-radius: 0px;
+    position: absolute;
+    right:0px;
+}
+.index{
+    width: 28%;
+    margin: 20px 10px;
+    padding: 0px;
+    /* border:solid 1px #0000ff; */
+    background-color: rgba(132, 192, 230, 0.692);
+    text-align: left;
+    float: left;
+    color:salmon;
+    position: relative;
+    left:40px;
+    box-shadow: 10px 10px 5px rgba(132, 192, 230,0.692);
+    /* box-shadow语法：box-shadow: h-shadow v-shadow blur spread color inset;
+    前四个为像素值，分别代表水平、竖直方向的阴影偏移距离，模糊距离，阴影大小。
+    后两个分别为颜色和从外层的阴影（开始时）改变阴影内侧阴影？ */
+    border-radius: 10px;
+    font-size: 20px;
+}
+.content{
+    width: 60%;
+    margin: 20px 20px;
+    float: right;
+    position: relative;
+    right: 30px;
+    /* border-radius: 10px; */
+    /* background-color: rgba(156, 156, 156, 0.849); */
+}
+.content h2{
+    margin:30px 10px;
+    line-height: 120%;
+}
+div.text1{
+    color: black;
+    background-color: #e2dfdfc2;
+    padding: 20px 40px;
+    border-radius: 0px;
+}
+div.text2{
+    color: #ffffff;
+    background-color: #4d4d4dbe;
+    padding: 20px 40px;
+    border-radius: 0px;
+    font-weight: 300;
+
+}
+.titleForIndex{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    padding-left: 20px;
+}
+div.text1 table{
+    margin:20px;
+    border-left:solid black 1px;
+    border-top: solid black 1px;
+    padding: 0px;
+}
+
+div.text1  table td, div.text1  table th{
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
+    padding:3px 10px;
+}
+div.text2 table{
+    margin:20px;
+    border-left:solid white 1px;
+    border-top: solid white 1px;
+    padding: 0px;
+}
+
+div.text2  table td,div.text2  table th{
+    border-right: solid white 1px;
+    border-bottom: solid white 1px;
+    padding:3px 10px;
+}
+
+div.text1 span.cover{
+    background-color: black;
+}
+div.text1 span.cover:hover{
+    background-color: #ffffff00;
+}
+div.text2 span.cover{
+    background-color: white;
+}
+div.text2 span.cover:hover{
+    background-color: #ffffff00;
+}
+.titleH2{
+    margin:30px auto;
+    text-align:center;
+    position: relative;
+    display: inline-block;
+}  
+.titleLine{
+    width:0;
+    height:2px;
+    background:rgb(49,49,57);
+    transition:width 300ms linear;
+    position:absolute;
+    margin:0 auto;
+    left:0;
+    right:0;
+
+}
+.text2 .titleLine{
+    background:white;
+}
+.comment{
+    margin: 30px auto;
+    position: relative;
+    float: left;
+    width:30%;
+    left:3%;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #e2dfdfc2;
+}
+.comment-name{
+    margin: 5px auto;
+    float: none;
+    
+}
+#comment-name{
+    margin:0px auto;
+}
+.comment-content{
+    height: 100px;
+}
+#comment-content{
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+}
+
+
+.info-container{
+    position: relative;
+    font-size: 14px;
+    color: white;
+    line-height: 200%;
+    margin-left: 10px;
+    border-radius: 3px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 目录页的页面简介 */
+.summaryContent{
+    margin:0 0 0 0;
+    background-color: #e2dfdfc2;
+    position: relative;
+}
+.summaryContent::after,.summaryContent::before{
+    content: '            ';
+    height:40px;
+    display: inline-block;
+}
+.summaryContent h2{
+    margin:10px 10px;
+    line-height: 45px;
+}
+.summaryText{
+    margin: 40px 40px;
+}
+.summary{
+    font-size: 13px;
+    margin: 0px 50px;
+}
+
+.summary::after{
+    content: '......';
+
+}
+.summaryContent h2 a{
+    font-size: inherit;
+    font-weight: inherit;
+    margin-left: 10px;
+}
+span.date{
+    color: #666;
+}
+span.date::after{
+    content: ' - ';
+}
+
+
+
+/* bootstrap相关 */
+
+
+
+/* bootstrap相关： */
+.dropdown-menu{
+    opacity: 0 ;
+    transition: opacity .2s;
+    box-shadow: 1px 1px 2px 1px rgb(122, 122, 122);
+    border: none;
+}
+.show .dropdown-menu{
+    display: none;
+}
+pre{
+    background-color: rgb(241, 241, 241);
+    border: .5px solid rgb(182, 182, 182);
+    border-radius: 4px;
+    box-shadow:1px 1px 3px 1px rgb(182, 182, 182);
+
+}
+.text2 .pop{
+    color: #8ce5f3;
+}
+.text1 .pop{
+    color: #0d889b;
+}
+
+.text2 .pop2{
+    color: #8ce5f3;
+}
+.text1 .pop2{
+    color: #0d889b;
+}
+/* .text1 h2 .pop{
+    color: black;
+}
+.text2 h2 .pop{
+    color: white;
+} */
+.content h2 span{
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 0; 
+}
+/* #17a2b8 */

@@ -1,0 +1,168 @@
+
+
+/* 给最外层的ul的类：grid、cs-style-3 
+li不需要类
+li中要有figure标签
+figure标签先有img，图像必须为400×300
+翻页特效在jsForIndexPages.js文件中实现
+本页中的样式均为类名特化的样式，因此不会影响其他标签
+在html中调用本控件时，只需要添加ul以内的代码（具体代码见原本模板），添加本css文件链接，以及部分js代码（位于../js/jsForIndexPages.js中）。注意每增加一个figure，一定要为其添加一个id：fig1、2、3，并在img标签后添加canvas标签。然后修改js中对应的内容,添加如下代码：
+	$('#fig2').hover(figHover,figOut);
+并在字符串组sRgb里增加相应的rgb值。
+
+注意li和ul标签的样式可能会被其他css文档影响*/
+
+
+.grid {
+	box-sizing: border-box;
+	padding: 20px 20px 100px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 440px;
+	margin: 40px 40px;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.grid figure {
+	box-sizing: border-box;
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	box-sizing: border-box;
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: rgb(44, 63, 82);
+	color: #ed4e6e;
+	
+}
+
+.grid figcaption h3 {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+
+.grid figcaption a {
+	box-sizing: border-box;
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+}
+
+
+
+
+
+/* Caption Style 3 */
+.cs-style-3 figure {
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.cs-style-3 figure img {
+	box-sizing: border-box;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.cs-style-3 figure:hover img,
+.cs-style-3 figure.cs-hover img {
+	box-sizing: border-box;
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	transform: translateY(-50px);
+}
+
+.cs-style-3 figcaption {
+	box-sizing: border-box;
+	height: 100px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+.cs-style-3 figure:hover canvas{
+	box-sizing: border-box;
+	-webkit-transform: translateY(-100px);
+	-moz-transform: translateY(-100px);
+	-ms-transform: translateY(-100px);
+	transform: translateY(-100px);
+}
+
+.cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
+	box-sizing: border-box;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	text-decoration: none;
+}
+
+/* @media screen and (max-width: 31.5em) {
+	.grid {
+		padding: 10px 10px 100px 10px;
+	}
+	.grid li {
+		width: 100%;
+		min-width: 300px;
+	}
+} */
+
+
+
+figure canvas{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 11;	
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+	visibility: hidden;
+}
